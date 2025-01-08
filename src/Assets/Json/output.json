@@ -1,0 +1,156 @@
+[
+	{
+		"id": "1",
+		"nama": "iphone 11 pro",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/free-vector/realistic-smartphone-device_52683-29765.jpg",
+		"deskripsi": "",
+		"harga": "1000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "apple"
+	},
+	{
+		"id": "2",
+		"nama": "samsung s24",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/free-vector/realistic-smartphone-device_52683-29765.jpg",
+		"deskripsi": "",
+		"harga": "10000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "samsung"
+	},
+	{
+		"id": "3",
+		"nama": "iphone x",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/free-photo/new-cell-phone-colorful-background_58702-4819.jpg?t=st=1735986158~exp=1735989758~hmac=3e8399158d7bb9427a79f45343ad1288a49ce608c872239f6eef3a3d9b4fcdc9&w=1380",
+		"deskripsi": "",
+		"harga": "1000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "apple"
+	},
+	{
+		"id": "4",
+		"nama": "iphone 8",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/free-vector/smartphone-with-gradient-wallpaper_23-2147842889.jpg?t=st=1735986346~exp=1735989946~hmac=1e85092d3465a1b8ef256739430ac46bf618b92a7e9b569ff6258b6164e12227&w=826",
+		"deskripsi": "",
+		"harga": "2000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "apple"
+	},
+	{
+		"id": "5",
+		"nama": "poco x3 ",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/free-vector/modern-smartphone_23-2147694816.jpg?t=st=1735986492~exp=1735990092~hmac=78e725128c597882608cbda954439f95cc2e54f32c0e2afcd6a6f800f771ea75&w=826",
+		"deskripsi": "",
+		"harga": "2000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "xiaomi"
+	},
+	{
+		"id": "6",
+		"nama": "pocox3 pro",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/free-vector/modern-smartphone_23-2147694816.jpg?t=st=1735986492~exp=1735990092~hmac=78e725128c597882608cbda954439f95cc2e54f32c0e2afcd6a6f800f771ea75&w=826",
+		"deskripsi": "",
+		"harga": "2000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "xiaomi"
+	},
+	{
+		"id": "7",
+		"nama": "poco f4",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/premium-psd/oppo-find-x3-pro-smartphone-review-features-flagship-performance-design_1240525-123585.jpg?w=826",
+		"deskripsi": "",
+		"harga": "2000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "xiaomi"
+	},
+	{
+		"id": "8",
+		"nama": "poco f5",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/premium-photo/oppo-find-x3-pro-with-billion-color-display-quadcamera-system_1240525-91375.jpg?w=740",
+		"deskripsi": "",
+		"harga": "2000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "xiaomi"
+	},
+	{
+		"id": "8",
+		"nama": "poco f6",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/free-vector/mobile-phones-illustration_1319-183.jpg?t=st=1735986645~exp=1735990245~hmac=0d75089c4fbc8ca712bffc4f6a72fd3d6860aa08b5b2d6a2488f172f2af8c3e7&w=826",
+		"deskripsi": "",
+		"harga": "7000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "xiaomi"
+	},
+	{
+		"id": "8",
+		"nama": "iphone 8",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/premium-psd/smartphone-design-mock-up-with-flip-feature_23-2149913042.jpg?w=996",
+		"deskripsi": "",
+		"harga": "7000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "xiaomi"
+	},
+	{
+		"id": "8",
+		"nama": "poco x3 ",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/premium-psd/smartphone-design-mock-up-with-flip-feature_23-2149913094.jpg?w=996",
+		"deskripsi": "",
+		"harga": "7000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "xiaomi"
+	},
+	{
+		"id": "8",
+		"nama": "pocox3 pro",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/free-vector/front-back-modern-smartphone_23-2147698165.jpg?t=st=1735986855~exp=1735990455~hmac=a8836a586aed67dde678b1bf6b4a62b21682478f0244bb4969b55eed909006d5&w=826",
+		"deskripsi": "",
+		"harga": "7000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "xiaomi"
+	},
+	{
+		"id": "8",
+		"nama": "pocox3 pro",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/free-vector/front-back-modern-smartphone_23-2147698165.jpg?t=st=1735986855~exp=1735990455~hmac=a8836a586aed67dde678b1bf6b4a62b21682478f0244bb4969b55eed909006d5&w=827",
+		"deskripsi": "",
+		"harga": "7000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "xiaomi"
+	},
+	{
+		"id": "8",
+		"nama": "pocox3 pro",
+		"kategori": "elektronik",
+		"gambar": "https://img.freepik.com/free-vector/front-back-modern-smartphone_23-2147698165.jpg?t=st=1735986855~exp=1735990455~hmac=a8836a586aed67dde678b1bf6b4a62b21682478f0244bb4969b55eed909006d5&w=828",
+		"deskripsi": "",
+		"harga": "7000000",
+		"rating": "5",
+		"stok ": "",
+		"merk": "xiaomi"
+	}
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Iphone 11",
+        "category": "Earphone",
+        "harga": 9999999,
+        "gambar": "https://demo.phlox.pro/shop-digital/wp-content/uploads/sites/127/2019/09/Mask-Group-5-1.png",
+        "spesifikasi": "lorem ipsum",
+        "background": "bg-red-600",
+        "rating": 5
+    },
+    {
+        "id": 2,
+        "name": "Iphone 11",
+        "category": "smartphone",
+        "harga": 9999999,
+        "gambar": "https://demo.phlox.pro/shop-digital/wp-content/uploads/sites/127/2019/09/clay-apple-watch-mockup-07.png",
+        "spesifikasi": "lorem ipsum",
+        "background": "bg-red-600",
+        "rating": 5
+    },
+    {
+        "id": 3,
+        "name": "Iphone 11",
+        "category": "smartphone",
+        "harga": 9999999,
+        "gambar": "https://demo.phlox.pro/shop-digital/wp-content/uploads/sites/127/2019/09/Laptop.png",
+        "spesifikasi": "lorem ipsum",
+        "background": "bg-red-600",
+        "rating": 4
+    },
+    {
+        "id": 4,
+        "name": "Iphone 11",
+        "category": "smartphone",
+        "harga": 9999999,
+        "gambar": "https://demo.phlox.pro/shop-digital/wp-content/uploads/sites/127/2019/09/Laptop.png",
+        "spesifikasi": "lorem ipsum",
+        "background": "bg-red-600",
+        "rating": 3
+    },
+    {
+        "id": 5,
+        "name": "Iphone 11",
+        "category": "smartphone",
+        "harga": 9999999,
+        "gambar": "https://demo.phlox.pro/shop-digital/wp-content/uploads/sites/127/2019/09/O6CCQV1.png",
+        "spesifikasi": "lorem ipsum",
+        "background": "bg-red-600",
+        "rating": 5
+    },
+    {
+        "id": 6,
+        "name": "Iphone 11",
+        "category": "smartphone",
+        "harga": 9999999,
+        "gambar": "https://demo.phlox.pro/shop-digital/wp-content/uploads/sites/127/2019/09/O6CCQV1.png",
+        "spesifikasi": "lorem ipsum",
+        "background": "bg-red-600",
+        "rating": 5
+    },
+    {
+        "id": 7,
+        "name": "Iphone 11",
+        "category": "smartphone",
+        "harga": 9999999,
+        "gambar": "https://demo.phlox.pro/shop-digital/wp-content/uploads/sites/127/2019/09/O6CCQV1.png",
+        "spesifikasi": "lorem ipsum",
+        "background": "bg-red-600",
+        "rating": 5
+    },
+    {
+        "id": 8,
+        "name": "Iphone 11",
+        "category": "smartphone",
+        "harga": 9999999,
+        "gambar": "https://demo.phlox.pro/shop-digital/wp-content/uploads/sites/127/2019/09/Group-1271-470x353.jpg",
+        "spesifikasi": "lorem ipsum",
+        "background": "bg-red-600",
+        "rating": 4
+    }
+]
