@@ -71,6 +71,52 @@ const About = () => {
             ease: "power2.inOut"
         })
 
+        // efek kotak merah 
+        gsap.fromTo('.virtual', {
+            x: 30,
+            duration: 1,
+            opacity: 0,
+        }, {
+            x: 1,
+            duration: 1,
+            scrollTrigger: { trigger: '.virtual', start: 'top 80%', once: true, marker: true },
+            opacity: 1,
+            ease: "power2.inOut"
+        })
+        gsap.fromTo('.flexibel', {
+            x: 30,
+            duration: 1,
+            opacity: 0,
+        }, {
+            x: 1,
+            duration: 1.5,
+            scrollTrigger: { trigger: '.virtual', start: 'top 80%', once: true, marker: true },
+            opacity: 1,
+            ease: "power2.inOut"
+        })
+        gsap.fromTo('.cepat', {
+            x: 30,
+            duration: 1,
+            opacity: 0,
+        }, {
+            x: 1,
+            duration: 2,
+            scrollTrigger: { trigger: '.virtual', start: 'top 80%', once: true, marker: true },
+            opacity: 1,
+            ease: "power2.inOut"
+        })
+        gsap.fromTo('.last', {
+            x: 30,
+            duration: 1,
+            opacity: 0,
+        }, {
+            x: 1,
+            duration: 2.5,
+            scrollTrigger: { trigger: '.virtual', start: 'top 80%', once: true, marker: true },
+            opacity: 1,
+            ease: "power2.inOut"
+        })
+
     }, [])
 
 
@@ -90,7 +136,7 @@ const About = () => {
             {/* isi Konten */}
 
             {/* motto */}
-            <div className='py-10 flex flex-col md:flex-row-reverse items-center gap-20 px-10 text-black'>
+            <div className='py-24 flex flex-col md:flex-row-reverse items-center gap-20 px-10 text-black'>
                 <div className='image w-80 h-80 md:w-[100rem] md:h-[30rem] rounded-3xl bg-red-200'>
                     <img src="https://demo.phlox.pro/shop-digital/wp-content/uploads/sites/127/2019/10/group-of-young-businesspeople-with-laptop-working-8SHTZUN.jpg" alt="" className='bg-cover bg-center w-full h-full object-cover rounded-3xl' />
                 </div>
@@ -121,28 +167,28 @@ const About = () => {
             {/* kedua */}
             <div className='py-20 bg-merah text-white px-10'>
                 <div className='flex flex-col md:flex-row justify-center items-center gap-5 '>
-                    <div className='flex flex-col justify-center items-center gap-3 text-center'>
+                    <div className='flex flex-col justify-center items-center gap-3 text-center virtual'>
                         <div className='w-20 h-20 border-2 border-gray-50 rounded-full flex justify-center items-center'>
                             <LuDatabaseBackup size={30} />
                         </div>
                         <h1>Virtual Document</h1>
                         <p className='text-gray-300'>Far far away, behind the word mountains, far from the countries vokalis</p>
                     </div>
-                    <div className='flex flex-col justify-center items-center gap-3 text-center'>
+                    <div className='flex flex-col justify-center items-center gap-3 text-center flexibel'>
                         <div className='w-20 h-20 border-2 border-gray-50 rounded-full flex justify-center items-center'>
                             <GiMoneyStack size={30} />
                         </div>
                         <h1>Pembayaran Fleksibel</h1>
                         <p className='text-gray-300'>Far far away, behind the word mountains, far from the countries vokalis</p>
                     </div>
-                    <div className='flex flex-col justify-center items-center gap-3 text-center'>
+                    <div className='flex flex-col justify-center items-center gap-3 text-center cepat'>
                         <div className='w-20 h-20 border-2 border-gray-50 rounded-full flex justify-center items-center'>
                             <GiSpeedometer size={30} />
                         </div>
                         <h1>Pengantaran Cepat</h1>
                         <p className='text-gray-300'>Far far away, behind the word mountains, far from the countries vokalis</p>
                     </div>
-                    <div className='flex flex-col justify-center items-center gap-3 text-center'>
+                    <div className='flex flex-col justify-center items-center gap-3 text-center last'>
                         <div className='w-20 h-20 border-2 border-gray-50 rounded-full flex justify-center items-center'>
                             <IoDiamond size={30} />
                         </div>

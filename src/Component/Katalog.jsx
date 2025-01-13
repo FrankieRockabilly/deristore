@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import { IoIosArrowForward } from "react-icons/io";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Disclosure } from '@headlessui/react';
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoIosRefresh } from "react-icons/io";
-import listProduct from '../Assets/Json/hasill.json';
+import listProduct from '../Assets/Json/output.json';
 import Footer from './Footer';
 import gsap from 'gsap';
 
 const Katalog = () => {
+    const navigate = useNavigate()
     const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedPrice, setSelectedPrice] = useState('');
     const [searchQuery, setSearchQuery] = useState('');
@@ -18,6 +19,13 @@ const Katalog = () => {
 
     const refresh = () => {
         window.location.reload();
+    }
+
+    const handleCLickProduct = (id, gambar, nama, deskripsi, harga, merk, rating) => {
+        navigate(`detail/${id}`, {
+            state: { gambar, nama, deskripsi, harga, merk, rating }
+        })
+
     }
     // GSAP animation
     useEffect(() => {
@@ -32,7 +40,7 @@ const Katalog = () => {
     useEffect(() => {
         const filterProducts = listProduct.filter((product) => {
             const matchesSearch = product.nama.toLowerCase().includes(searchQuery.toLowerCase()) || product.kategori.toLowerCase().includes(searchQuery.toLowerCase()) || product.harga.toLowerCase().includes(searchQuery.toLowerCase());
-            const matchesCategory = !selectedCategory || product.kategori === selectedCategory;
+            const matchesCategory = !selectedCategory || product.tipe === selectedCategory;
             const matchesPrice = !selectedPrice || (
                 (selectedPrice === '3000000-' && product.harga >= 3000000) ||
                 (selectedPrice === '2000000-3000000' && product.harga >= 2000000 && product.harga <= 3000000) ||
@@ -81,7 +89,7 @@ const Katalog = () => {
                                         <MdKeyboardArrowRight />
                                     </Disclosure.Button>
                                     <Disclosure.Panel className="px-16 pt-2 pb-4 space-y-4 rounded-lg">
-                                        {['elektronik', 'laptop', 'gaming', 'casing'].map(category => (
+                                        {['elektronik', 'furniture', 'smartphone', 'smartwatch', 'tablet'].map(category => (
                                             <p
                                                 key={category}
                                                 className={`cursor-pointer hover:text-merah ${selectedCategory === category ? 'text-merah' : ''}`}
@@ -127,14 +135,20 @@ const Katalog = () => {
                     <p className='text-center text-gray-500 text-xs py-5 md:text-left md:text-base'>{`Menampilkan ${totalProducts} produk`}</p>
                     <div className='flex justify-center md:justify-start items-center flex-wrap gap-5'>
                         {filteredProducts.map((value, index) => (
-                            <div key={index} className='flex flex-col items-start gap-3 md:gap-5'>
-                                <div className='bg-gray-200 rounded-3xl w-40 h-40 lg:w-72 lg:h-72 px-1 py-1 md:px-3 md:py-3 flex justify-center items-center overflow-hidden'>
-                                    <img src={value.gambar} alt={value.nama} className='object-cover w-full h-full hover:scale-110 transition-all duration-300 rounded-3xl' />
+                            <div key={index} className='flex flex-col items-start gap-3 md:gap-5 '>
+                                <div className='bg-gray-200 rounded-3xl w-40 h-40 lg:w-72 lg:h-72 px-1 py-1 md:px-3 md:py-3 flex justify-center items-center overflow-hidden shadow-xl'>
+                                    <img src={value.gambar} alt={value.nama} className='object-cover w-full h-full hover:scale-110 transition-all duration-300 rounded-3xl' onClick={() => { handleCLickProduct(value.id, value.gambar, value.nama, value.deskripsi, value.harga, value.merk, value.rating) }} />
                                 </div>
                                 <div className='w-40 md:w-72 truncate flex flex-col gap-2'>
-                                    <h2>{value.nama}</h2>
-                                    <p className='text-gray-400'>{value.kategori}</p>
-                                    <p className='font-bold text-base md:text-lg font-serif'>Rp {value.harga}</p>
+                                    <div className='flex justify-between items-start'>
+                                        <h2 className=' w-[75%] text-wrap'>{value.nama}</h2>
+                                        <p className='font-bold text-xs text-zinc-400'>{value.merk} </p>
+                                    </div>
+                                    <p className='text-gray-400'>{value.tipe}</p>
+                                    <p className='font-bold text-base md:text-lg font-sans'>
+                                        {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(value.harga)}
+                                    </p>
+
                                 </div>
                             </div>
                         ))}

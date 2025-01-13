@@ -4,7 +4,7 @@ import HomePage from "../Pages/HomePage";
 import KatalogPage from "../Pages/KatalogPage";
 import ContactPage from "../Pages/ContactPage";
 import AboutPage from "../Pages/AboutPage";
-import AnjayPage from "../Pages/AnjayPage";
+import DetailProduct from "../Component/DetailProduct";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +17,13 @@ const router = createBrowserRouter([
       },
       {
         path: 'katalog', // Halaman katalog
-        element: <KatalogPage />
+        element: <KatalogPage />,
+        children:[
+          {
+            path: 'detail/:id',
+            element: <DetailProduct />
+          }
+        ]
       },
       {
         path: 'contact', // Halaman kontak
@@ -26,11 +32,7 @@ const router = createBrowserRouter([
       {
         path: 'about', // Halaman tentang
         element: <AboutPage />
-      },
-      {
-        path: 'anjay', // Halaman tentang
-        element: <AnjayPage />
-      },
+      }
     ]
   }
 ]);
