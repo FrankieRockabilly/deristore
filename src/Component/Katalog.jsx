@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Header from './Header';
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward, IoIosRefresh } from "react-icons/io";
 import { Link, useNavigate } from 'react-router-dom';
 import { Disclosure } from '@headlessui/react';
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { IoIosRefresh } from "react-icons/io";
 import listProduct from '../Assets/Json/output.json';
 import Footer from './Footer';
 import gsap from 'gsap';
@@ -15,7 +14,9 @@ const Katalog = () => {
     const [selectedPrice, setSelectedPrice] = useState('');
     const [searchQuery, setSearchQuery] = useState('');
     const [filteredProducts, setFilteredProducts] = useState([]);
-    const [totalProducts, setTotalProducts] = useState(0);
+    const [visibleProducts, setVisibleProducts] = useState([]); // Produk yang tampil saat ini
+    const [totalProducts, setTotalProducts] = useState(0); // Jumlah total produk
+    const [showAll, setShowAll] = useState(false); // Apakah tombol "Lihat lainnya" sudah diklik
 
     const refresh = () => {
         window.location.reload();
@@ -25,8 +26,8 @@ const Katalog = () => {
         navigate(`detail/${id}`, {
             state: { gambar, nama, deskripsi, harga, merk, rating }
         })
-
     }
+
     // GSAP animation
     useEffect(() => {
         gsap.fromTo(
@@ -36,7 +37,7 @@ const Katalog = () => {
         );
     }, [selectedCategory, selectedPrice]);
 
-    // Update filtered products when search, category, or price changes
+    // Update filtered products ketika search, kategori, atau harga berubah
     useEffect(() => {
         const filterProducts = listProduct.filter((product) => {
             const matchesSearch = product.nama.toLowerCase().includes(searchQuery.toLowerCase()) || product.kategori.toLowerCase().includes(searchQuery.toLowerCase()) || product.harga.toLowerCase().includes(searchQuery.toLowerCase());
@@ -48,9 +49,21 @@ const Katalog = () => {
             );
             return matchesSearch && matchesCategory && matchesPrice;
         });
+
         setFilteredProducts(filterProducts);
+
+        // Set total products setelah filteredProducts terupdate
         setTotalProducts(filterProducts.length);
+
+        // Limit 20 produk pertama
+        setVisibleProducts(filterProducts.slice(0, 20));
     }, [searchQuery, selectedCategory, selectedPrice]);
+
+    // Menampilkan produk lebih banyak
+    const handleShowMore = () => {
+        setVisibleProducts(filteredProducts); // Menampilkan semua produk
+        setShowAll(true); // Menyembunyikan tombol "Lihat lainnya"
+    };
 
     return (
         <div className='text-black'>
@@ -132,9 +145,9 @@ const Katalog = () => {
 
                 <div className='px-5 w-full md:w-3/4'>
                     <h1 className='font-bold text-2xl md:text-4xl hidden md:block'>Shop</h1>
-                    <p className='text-center text-gray-500 text-xs py-5 md:text-left md:text-base'>{`Menampilkan ${totalProducts} produk`}</p>
+                    <p className='text-center text-gray-500 text-xs py-5 md:text-left md:text-base'>{`Menampilkan ${visibleProducts.length} dari ${totalProducts} produk`}</p>
                     <div className='flex justify-center md:justify-start items-center flex-wrap gap-5'>
-                        {filteredProducts.map((value, index) => (
+                        {visibleProducts.map((value, index) => (
                             <div key={index} className='flex flex-col items-start gap-3 md:gap-5 '>
                                 <div className='bg-gray-200 rounded-3xl w-40 h-40 lg:w-72 lg:h-72 px-1 py-1 md:px-3 md:py-3 flex justify-center items-center overflow-hidden shadow-xl'>
                                     <img src={value.gambar} alt={value.nama} className='object-cover w-full h-full hover:scale-110 transition-all duration-300 rounded-3xl' onClick={() => { handleCLickProduct(value.id, value.gambar, value.nama, value.deskripsi, value.harga, value.merk, value.rating) }} />
@@ -148,11 +161,15 @@ const Katalog = () => {
                                     <p className='font-bold text-base md:text-lg font-sans'>
                                         {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(value.harga)}
                                     </p>
-
                                 </div>
                             </div>
                         ))}
                     </div>
+                    {!showAll && filteredProducts.length > 20 && (
+                        <div className="flex justify-start mt-10">
+                            <button onClick={handleShowMore} className="bg-red-500 text-white px-6 py-2 hover:bg-red-800 rounded-full">Lihat Lainnya</button>
+                        </div>
+                    )}
                 </div>
             </div>
 

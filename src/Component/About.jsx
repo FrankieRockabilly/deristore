@@ -138,7 +138,7 @@ const About = () => {
             {/* motto */}
             <div className='py-24 flex flex-col md:flex-row-reverse items-center gap-20 px-10 text-black'>
                 <div className='image w-80 h-80 md:w-[100rem] md:h-[30rem] rounded-3xl bg-red-200'>
-                    <img src="https://demo.phlox.pro/shop-digital/wp-content/uploads/sites/127/2019/10/group-of-young-businesspeople-with-laptop-working-8SHTZUN.jpg" alt="" className='bg-cover bg-center w-full h-full object-cover rounded-3xl' />
+                    <img src="https://demo.phlox.pro/shop-decoration/wp-content/uploads/sites/136/2019/12/colorful-modern-living-room-P3EZBUN@2x.jpg" alt="" className='bg-cover bg-center w-full h-full object-cover rounded-3xl' />
                 </div>
 
                 <div className='paragraph'>
@@ -172,28 +172,28 @@ const About = () => {
                             <LuDatabaseBackup size={30} />
                         </div>
                         <h1>Virtual Document</h1>
-                        <p className='text-gray-300'>Far far away, behind the word mountains, far from the countries vokalis</p>
+                        <p className='text-gray-300 w-[70%]'>Dokumen digital, Bukti Pembayaran. Semua jadi lebih mudah</p>
                     </div>
                     <div className='flex flex-col justify-center items-center gap-3 text-center flexibel'>
                         <div className='w-20 h-20 border-2 border-gray-50 rounded-full flex justify-center items-center'>
                             <GiMoneyStack size={30} />
                         </div>
                         <h1>Pembayaran Fleksibel</h1>
-                        <p className='text-gray-300'>Far far away, behind the word mountains, far from the countries vokalis</p>
+                        <p className='text-gray-300 w-[70%]'>Pembayaran Mudah, Aman, dan Terpercaya</p>
                     </div>
                     <div className='flex flex-col justify-center items-center gap-3 text-center cepat'>
                         <div className='w-20 h-20 border-2 border-gray-50 rounded-full flex justify-center items-center'>
                             <GiSpeedometer size={30} />
                         </div>
                         <h1>Pengantaran Cepat</h1>
-                        <p className='text-gray-300'>Far far away, behind the word mountains, far from the countries vokalis</p>
+                        <p className='text-gray-300 w-[70%]'>Pengantaran cepat, proses yang mudah dan aman</p>
                     </div>
                     <div className='flex flex-col justify-center items-center gap-3 text-center last'>
                         <div className='w-20 h-20 border-2 border-gray-50 rounded-full flex justify-center items-center'>
                             <IoDiamond size={30} />
                         </div>
                         <h1>Virtual Document</h1>
-                        <p className='text-gray-300'>Far far away, behind the word mountains, far from the countries vokalis</p>
+                        <p className='text-gray-300 w-[70%]'>Kualitas premium, Garansi Resmi, dan Pelayanan Terbaik</p>
                     </div>
                 </div>
             </div>
@@ -210,8 +210,8 @@ const About = () => {
                 </div>
                 <div className='bg-merah px-2 py-10 md:w-[35rem] rounded-3xl flex flex-col justify-center items-center gap-10 boxDua'>
                     <div className='text-center py-5'>
-                        <h2 className='md:text-xl mb-3 '>Kirim Pesan Kepada Kami</h2>
-                        <h2 className='text-2xl md:text-4xl font-semibold'>Kirim Pesan Kepada Kami</h2>
+                        <h2 className='md:text-xl mb-3 '>Ceritakan Pengalaman Anda</h2>
+                        <h2 className='text-2xl md:text-4xl font-semibold'>Berikan Masukan</h2> 
                     </div>
                     <input type="text" placeholder='Beri Masukan Pada Kami' className='px-5 py-4 bg-white rounded-full w-[60%] outline-none' />
                 </div>

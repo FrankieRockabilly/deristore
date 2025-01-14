@@ -54,15 +54,15 @@ const Contact = () => {
 
             {/* GET IN TOUCH */}
             <div className='relative'>
-                <div className='flex flex-col md:flex-row justify-center items-center gap-5 px-8 py-5 md:absolute md:-top-48 md:right-1/2 md:transform md:translate-x-1/2 z-[999]'>
-                    <div className='w-full h-44 md:w-[27rem] md:h-72 bg-white shadow-2xl flex flex-col md:flex-row justify-center items-center gap-5 box1'>
+                <div className='flex flex-col md:flex-row justify-center items-center gap-5 px-8 py-5 md:absolute md:-top-48 md:right-1/2 md:transform md:translate-x-1/2 z-[799]'>
+                    <div className='w-full h-72 md:w-[27rem] md:h-72 py-10 bg-white shadow-2xl flex flex-col md:flex-row justify-center items-center gap-5 box1'>
                         <SiOrganicmaps size={40} color='#a83232' />
-                        <div className='flex flex-col gap-2 items-center md:items-start'>
+                        <div className='flex flex-col gap-2 items-center md:items-start border w-52'>
                             <h1 className='text-2xl'>Alamat</h1>
-                            <p className='text-gray-600'>Jl Kota tengah </p>
+                            <p className='text-gray-600'>Kota Tengah Gelugur, Jalan Lintas Duri, Kepenuhan Tengah, Kepenuhan ( Tiwi Ponsel ) </p>
                         </div>
                     </div>
-                    <div className='w-full h-44 md:w-[27rem] md:h-72 bg-white shadow-2xl flex flex-col md:flex-row justify-center items-center gap-5 box2'>
+                    <div className='w-full h-72 md:w-[27rem] md:h-72 bg-white shadow-2xl flex flex-col md:flex-row justify-center items-center gap-5 box2'>
                         <MdPhoneAndroid size={40} color='#a83232' />
                         <div className='flex flex-col items-center md:items-start gap-2 '>
                             <h1 className='text-2xl'>Telp</h1>
@@ -70,7 +70,7 @@ const Contact = () => {
                             <p className='text-gray-600'>rderi7227@gmail.com</p>
                         </div>
                     </div>
-                    <div className='w-full h-44 md:w-[27rem] md:h-72 bg-white shadow-2xl flex flex-col md:flex-row justify-center items-center gap-5 box3'>
+                    <div className='w-full h-72 md:w-[27rem] md:h-72 bg-white shadow-2xl flex flex-col md:flex-row justify-center items-center gap-5 box3'>
                         <LuClock8 size={40} color='#a83232' />
                         <div className='flex flex-col gap-2 items-center md:items-start'>
                             <h1 className='text-2xl'>Jam Buka</h1>

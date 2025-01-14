@@ -6,8 +6,12 @@ const WhatsappModal = ({ setIsWhatsappActive }) => {
 
     const handleSubmitPesan = (e) => {
         e.preventDefault()
-        alert(isiPesan, "telah berhasil dikirim")
-        setIsWhatsappActive(false)
+        if (isiPesan) {
+            alert(isiPesan, "telah berhasil dikirim")
+            setIsWhatsappActive(false)
+        } else {
+            alert("Silahkan Masukkan Pesan")
+        }
     }
 
 
@@ -33,7 +37,7 @@ const WhatsappModal = ({ setIsWhatsappActive }) => {
     }, []);
     return (
         <div>
-            <div className='h-[40rem] w-[25rem]   bg-white shadow-2xl rounded-3xl border flex flex-col overflow-hidden'>
+            <div className='w-[21rem] h-[35rem] md:h-[40rem] md:w-[25rem] bg-white shadow-2xl rounded-3xl border flex flex-col overflow-hidden text-sm md:text-base'>
                 <div className='py-4 bg-blue-600 flex flex-col justify-center items-center text-white rounded-t-3xl flex-grow-0'>
                     <p>Chat Me</p>
                     <p>Person</p>
