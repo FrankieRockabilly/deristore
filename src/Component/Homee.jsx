@@ -115,11 +115,11 @@ const Homee = () => {
 
                 {/* kotak pertama headphone*/}
                 <div className='bg-[#8bc1c3] rounded-3xl px-3 py-20  md:py-64 flex justify-center items-center scale-110 mt-7 relative topPage border '>
-                    <div className='absolute transform md:left-0 w-[18rem] md:w-[50rem] justify-between items-center chair'>
+                    <div className='absolute transform md:left-0 w-[18rem] md:w-[50rem] justify-between items-center hidden  lg:block chair'>
                         <img src={chair} alt="" className='object-cover ' />
                     </div>
-                    <div className='absolute transform md:-right-32 md:top-16 w-[18rem] md:w-[50rem] justify-between items-center hidden  lg:block phone'>
-                        <img src={airpods} alt="" className="object-cover scale-150" />
+                    <div className='absolute transform -right-12 md:-right-32 md:top-16 w-[18rem] md:w-[50rem] justify-between items-center  phone'>
+                        <img src={airpods} alt="" className="object-cover lg:scale-150" />
                     </div>
 
                     <div className='flex flex-col items-start gap-3 z-20 heading '>

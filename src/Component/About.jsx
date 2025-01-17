@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from './Header'
 import { Link } from 'react-router-dom'
 import { IoIosArrowForward } from "react-icons/io";

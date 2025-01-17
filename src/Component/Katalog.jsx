@@ -4,6 +4,7 @@ import { IoIosArrowForward, IoIosRefresh } from "react-icons/io";
 import { Link, useNavigate } from 'react-router-dom';
 import { Disclosure } from '@headlessui/react';
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { IoIosCheckmarkCircle } from "react-icons/io";
 import listProduct from '../Assets/Json/output.json';
 import Footer from './Footer';
 import gsap from 'gsap';
@@ -148,7 +149,7 @@ const Katalog = () => {
                     <p className='text-center text-gray-500 text-xs py-5 md:text-left md:text-base'>{`Menampilkan ${visibleProducts.length} dari ${totalProducts} produk`}</p>
                     <div className='flex justify-center md:justify-start items-center flex-wrap gap-5'>
                         {visibleProducts.map((value, index) => (
-                            <div key={index} className='flex flex-col items-start gap-3 md:gap-5 '>
+                            <div key={index} className='flex flex-col items-start gap-3 md:gap-5'>
                                 <div className='bg-gray-200 rounded-3xl w-40 h-40 lg:w-72 lg:h-72 px-1 py-1 md:px-3 md:py-3 flex justify-center items-center overflow-hidden shadow-xl'>
                                     <img src={value.gambar} alt={value.nama} className='object-cover w-full h-full hover:scale-110 transition-all duration-300 rounded-3xl' onClick={() => { handleCLickProduct(value.id, value.gambar, value.nama, value.deskripsi, value.harga, value.merk, value.rating) }} />
                                 </div>
@@ -158,8 +159,10 @@ const Katalog = () => {
                                         <p className='font-bold text-xs text-zinc-400'>{value.merk} </p>
                                     </div>
                                     <p className='text-gray-400'>{value.tipe}</p>
-                                    <p className='font-bold text-base md:text-lg font-sans'>
-                                        {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(value.harga)}
+                                    <p className='font-semibold text-base md:text-lg font-sans flex justify-start items-center gap-3'>
+                                        {/* {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(value.harga)} */}
+                                        <p>Cash and Kredit</p>
+                                        <IoIosCheckmarkCircle color='#0bbf62' size={25} />
                                     </p>
                                 </div>
                             </div>
