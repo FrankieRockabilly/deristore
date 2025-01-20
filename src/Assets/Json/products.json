@@ -51,10 +51,10 @@
     },
     {
         "id": 6,
-        "name": "Kursi Ruang Tamu",
-        "category": "Furniture",
+        "name": "Televisi",
+        "category": "Elektronik",
         "harga": 9999999,
-        "gambar": "kursiMerah.png",
+        "gambar": "tv.png",
         "spesifikasi": "lorem ipsum",
         "background": "bg-red-600",
         "rating": 5

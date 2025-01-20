@@ -8,7 +8,7 @@ import { IoWallet } from "react-icons/io5";
 import chair from '../Assets/Image/chair.png'
 import airpods from '../Assets/Image/airpods.png'
 import kursiMerah from '../Assets/Image/kursiMerah.png'
-import electronics from '../Assets/Image/eletronics.png'
+import tv from '../Assets/Image/tv.png'
 import laptop from '../Assets/Image/laptop.png'
 
 // gsap effect
@@ -141,17 +141,19 @@ const Homee = () => {
                         </div>
                     </div>
                     {/* 2 */}
-                    <div className={`bg-green-600 rounded-3xl w-40 h-52  md:w-72 md:h-80 flex justify-st items-end relative overflow-hidden`} >
-                        <img src="https://img.freepik.com/free-photo/smartphone-device-with-minimalist-monochrome-background_23-2150763310.jpg?t=st=1737364745~exp=1737368345~hmac=eaf764cd18eb65b06f664611fb424e4dbffa5b805086dffc1aa0e467d043c2b0&w=1380" alt="" className='absolute h-full w-full object-cover' />
-                        <div className='mb-11 px-3 py-3'>
-                            <h1 className='text-2xl font-bold opacity-70 md:tracking-[0.8rem]'>Smartphone</h1>
+
+                    {/* 2 */}
+                    <div className={`bg-yellow-400 rounded-3xl w-40 h-52 md:w-72 md:h-80 flex justify-st items-end relative overflow-hidden`} >
+                        <img src="https://img.freepik.com/free-photo/smartphone-device-with-minimalist-monochrome-background_23-2150763310.jpg?t=st=1737364745~exp=1737368345~hmac=eaf764cd18eb65b06f664611fb424e4dbffa5b805086dffc1aa0e467d043c2b0&w=1380" alt="" className='absolute object-cover w-full h-full' />
+                        <div className='mb-11  px-3 py-3'>
+                            <h1 className='text-2xl font-bold opacity-70 md:tracking-[0.8rem] text-wrap'>Phone</h1>
                         </div>
                     </div>
                     {/* 2 */}
                     <div className={`bg-yellow-400 rounded-3xl w-40 h-52 md:w-72 md:h-80 flex justify-st items-end relative overflow-hidden`} >
-                        <img src="https://img.freepik.com/premium-photo/overhead-view-laptop-stationeries-yellow-surface_636537-5612.jpg?w=1380" alt="" className='absolute object-cover w-full h-full' />
+                        <img src={tv} alt="" className='absolute object-contain w-full h-full' />
                         <div className='mb-11  px-3 py-3'>
-                            <h1 className='text-2xl font-bold opacity-70 md:tracking-[0.8rem]'>Electronics</h1>
+                            <h1 className='text-2xl font-bold opacity-70 md:tracking-[0.8rem] text-wrap'>Electronics</h1>
                         </div>
                     </div>
                     {/* 4 */}
