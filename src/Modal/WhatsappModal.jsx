@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
 
-const WhatsappModal = ({ setIsWhatsappActive }) => {
+const WhatsappModal = () => {
     const [isiPesan, setIsiPesan] = useState('')
+    const whatsappNumber = '+6282258662305'
 
-    const handleSubmitPesan = (e) => {
-        e.preventDefault()
-        if (isiPesan) {
-            alert(isiPesan, "telah berhasil dikirim")
-            setIsWhatsappActive(false)
-        } else {
-            alert("Silahkan Masukkan Pesan")
-        }
+    function handleSubmitPesan(event) {
+        event.preventDefault();
+        // Membuat URL WhatsApp yang bisa diklik
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(isiPesan)}`;
+        // Mengarahkan ke WhatsApp
+        window.open(whatsappURL, '_blank');
     }
 
 

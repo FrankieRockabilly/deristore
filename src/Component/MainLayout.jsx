@@ -24,7 +24,7 @@ const MainLayout = () => {
                     <img src={wa} alt="WhatsApp" className="w-full h-full" />
 
                     {isWhatsappActive && (
-                        <div className='absolute -top-[40rem] right-2 z-50 box' onClick={handleModalClick}>
+                        <div className='absolute -top-[36rem] md:-top-[40rem] right-2 z-50 box' onClick={handleModalClick}>
                             <WhatsappModal setIsWhatsappActive={setIsWhatsappActive} />
                         </div>
                     )}
