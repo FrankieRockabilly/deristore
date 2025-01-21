@@ -211,9 +211,9 @@ const About = () => {
                 <div className='bg-merah px-2 py-10 md:w-[35rem] rounded-3xl flex flex-col justify-center items-center gap-10 boxDua'>
                     <div className='text-center py-5'>
                         <h2 className='md:text-xl mb-3 '>Ceritakan Pengalaman Anda</h2>
-                        <h2 className='text-2xl md:text-4xl font-semibold'>Berikan Masukan</h2> 
+                        <h2 className='text-2xl md:text-4xl font-semibold '>Berikan Masukan</h2> 
                     </div>
-                    <input type="text" placeholder='Beri Masukan Pada Kami' className='px-5 py-4 bg-white rounded-full w-[60%] outline-none' />
+                    <input type="text" placeholder='Beri Masukan Pada Kami' className='px-5 py-4 bg-white rounded-full w-[60%] outline-none text-black' />
                 </div>
 
             </div>

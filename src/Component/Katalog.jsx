@@ -159,11 +159,11 @@ const Katalog = () => {
                                         <p className='font-bold text-xs text-zinc-400'>{value.merk} </p>
                                     </div>
                                     <p className='text-gray-400'>{value.tipe}</p>
-                                    <p className='font-semibold text-base md:text-lg font-sans flex justify-start items-center gap-3'>
+                                    <div className='font-semibold text-base md:text-lg font-sans flex justify-start items-center gap-3'>
                                         {/* {new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR' }).format(value.harga)} */}
                                         <p>Cash and Kredit</p>
                                         <IoIosCheckmarkCircle color='#0bbf62' size={25} />
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                         ))}
