@@ -34,7 +34,7 @@ const Katalog = () => {
         gsap.fromTo(
             ".box",
             { y: 0, opacity: 0 },
-            { y: -20, opacity: 1, duration: 2, ease: "power2.out" }
+            { y: -20, opacity: 1, duration: 1, ease: "power2.out" }
         );
     }, [selectedCategory, selectedPrice]);
 
@@ -148,8 +148,8 @@ const Katalog = () => {
                     <h1 className='font-bold text-2xl md:text-4xl hidden md:block'>Shop</h1>
                     <p className='text-center text-gray-500 text-xs py-5 md:text-left md:text-base'>{`Menampilkan ${visibleProducts.length} dari ${totalProducts} produk`}</p>
                     <div className='flex justify-center md:justify-start items-center flex-wrap gap-5'>
-                        {visibleProducts.map((value, index) => (
-                            <div key={index} className='flex flex-col items-start gap-3 md:gap-5'>
+                        {visibleProducts?.map((value, index) => (
+                            <div key={index} className='flex flex-col items-start gap-3 md:gap-5 box'>
                                 <div className='bg-gray-200 rounded-3xl w-40 h-40 lg:w-72 lg:h-72 px-1 py-1 md:px-3 md:py-3 flex justify-center items-center overflow-hidden shadow-xl'>
                                     <img src={value.gambar} alt={value.nama} className='object-cover w-full h-full hover:scale-110 transition-all duration-300 rounded-3xl' onClick={() => { handleCLickProduct(value.id, value.gambar, value.nama, value.deskripsi, value.harga, value.merk, value.rating) }} />
                                 </div>
